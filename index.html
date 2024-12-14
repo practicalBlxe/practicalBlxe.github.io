@@ -309,7 +309,7 @@
         peopleAwards[query].forEach(entry => {
             const li = document.createElement('li');
             const img = document.createElement('img');
-            img.src = awardImages[entry.award.toLowerCase()] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Placeholder_award.svg/120px-Placeholder_award.svg.png';
+            img.src = awardImages[entry.award] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Noribbon.svg/1920px-Noribbon.svg.png';
             img.alt = entry.award;
             li.appendChild(img);
 
