@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Award Logging System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        ul li img {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+        #loginContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #appContainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>US Award Logging System</h1>
+    </header>
+    <div id="loginContainer" class="container">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username...">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password...">
+        </div>
+        <button id="loginButton">Login</button>
+        <p id="loginMessage" style="color: red; display: none;">Invalid username or password.</p>
+    </div>
+    <div id="appContainer" class="container">
+        <div class="form-group">
+            <label for="personName">Search Awards by Name</label>
+            <input type="text" id="personName" placeholder="Enter person's name...">
+        </div>
+        <button id="searchButton">Search</button>
+        <ul id="resultsList"></ul>
+        <hr>
+        <div id="logAwardContainer" style="display: none;">
+            <div class="form-group">
+                <label for="newPerson">Log New Award</label>
+                <input type="text" id="newPerson" placeholder="Enter person's name...">
+            </div>
+            <div class="form-group">
+                <input type="text" id="newAward" placeholder="Enter new award name...">
+            </div>
+            <div class="form-group">
+                <input type="text" id="newDevice" placeholder="Enter devices (if applicable)...">
+            </div>
+            <button id="logButton">Log Award</button>
+        </div>
+    </div>
+
+    <script>
+        const awardImages = {
+            "Medal of Honor": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/US_Medal_of_Honor_%28Army%29_ribbon.svg/120px-US_Medal_of_Honor_%28Army%29_ribbon.svg.png",
+            "Distinguished Service Cross": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Distinguished_Service_Cross_ribbon.svg/120px-Distinguished_Service_Cross_ribbon.svg.png",
+            "Defense Distinguished Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Defense_Distinguished_Service_Medal_ribbon.svg/120px-Defense_Distinguished_Service_Medal_ribbon.svg.png",
+            "Joint Services Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Joint_Service_Commendation_Medal_ribbon.svg/120px-Joint_Service_Commendation_Medal_ribbon.svg.png",
+            "Army Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Army_Commendation_Medal_ribbon.svg/120px-Army_Commendation_Medal_ribbon.svg.png",
+            "Joint Services Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Joint_Service_Achievement_Medal_ribbon.svg/120px-Joint_Service_Achievement_Medal_ribbon.svg.png",
+            "Army Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Army_Achievement_Medal_ribbon.svg/120px-Army_Achievement_Medal_ribbon.svg.png",
+            // Additional awards images here...
+        };
+
+        const apiBaseUrl = "https://api.github.com/repos/<username>/<repo>/contents/"; // Replace with your GitHub repo details
+        const token = "<your-personal-access-token>"; // Replace with your GitHub token
+
+        async function fetchFile(filePath) {
+            const response = await fetch(`${apiBaseUrl}${filePath}`, {
+                headers: {
+                    Authorization: `token ${token}`
+                }
+            });
+            if (!response.ok) {
+                console.error(`Failed to fetch ${filePath}`);
+                return null;
+            }
+            const fileData = await response.json();
+            return JSON.parse(atob(fileData.content));
+        }
+
+        async function updateFile(filePath, content, sha) {
+            const response = await fetch(`${apiBaseUrl}${filePath}`, {
+                method: 'PUT',
+                headers: {
+                    Authorization: `token ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `Update ${filePath}`,
+                    content: btoa(JSON.stringify(content)),
+                    sha
+                })
+            });
+            if (!response.ok) {
+                console.error(`Failed to update ${filePath}`);
+            }
+        }
+
+        let validUsers = {};
+        let peopleAwards = {};
+
+        async function initializeApp() {
+            validUsers = await fetchFile('validUsers.json') || {};
+            peopleAwards = await fetchFile('peopleAwards.json') || {};
+        }
+
+        const loginContainer = document.getElementById('loginContainer');
+        const appContainer = document.getElementById('appContainer');
+        const logAwardContainer = document.getElementById('logAwardContainer');
+
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('loginButton');
+        const loginMessage = document.getElementById('loginMessage');
+
+        loginButton.addEventListener('click', () => {
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (validUsers[username] && validUsers[username] === password) {
+                loginContainer.style.display = 'none';
+                appContainer.style.display = 'block';
+
+                if (username === 'admin') {
+                    logAwardContainer.style.display = 'block';
+                }
+            } else {
+                loginMessage.style.display = 'block';
+            }
+        });
+
+        const searchButton = document.getElementById('searchButton');
+        const personName = document.getElementById('personName');
+        const resultsList = document.getElementById('resultsList');
+
+        const logButton = document.getElementById('logButton');
+        const newPerson = document.getElementById('newPerson');
+        const newAward = document.getElementById('newAward');
+        const newDevice = document.getElementById('newDevice');
+
+        searchButton.addEventListener('click', () => {
+            const query = personName.value.trim();
+            resultsList.innerHTML = '';
+
+            if (peopleAwards[query]) {
+                peopleAwards[query].forEach(entry => {
+                    const li = document.createElement('li');
+                    const img = document.createElement('img');
+                    img.src = awardImages[entry.award] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Placeholder_award.svg/120px-Placeholder_award.svg.png';
+                    img.alt = entry.award;
+                    li.appendChild(img);
+                    li.appendChild(document.createTextNode(`${entry.award} (Devices: ${entry.devices})`));
+                    resultsList.appendChild(li);
+                });
+            } else {
+                resultsList.innerHTML = '<li>No awards found for this person.</li>';
+            }
+        });
+
+        logButton.addEventListener('click', async () => {
+            const person = newPerson.value.trim();
+            const award = newAward.value.trim();
+            const device = newDevice.value.trim() || "None";
+
+            if (person && award) {
+                if (!peopleAwards[person]) {
+                    peopleAwards[person] = [];
+                }
+
+                peopleAwards[person].push({ award, devices: device });
+
+                await updateFile('peopleAwards.json', peopleAwards, "<sha-for-peopleAwards.json>");
+                alert(`Award "${award}" with device "${device}" has been logged for ${person}.`);
+
+                newPerson.value = '';
+                newAward.value = '';
+                newDevice.value = '';
+            } else {
+                alert("Please enter a valid person's name and award.");
+            }
+        });
+
+        initializeApp();
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "Jane Doe": [
+      {
+        "award": "Medal of Honor",
+        "devices": []
+      },
+      {
+        "award": "Army Achievement Medal",
+        "devices": ["Oak Cluster Device"]
+      }
+    ],
+    "John Doe": [
+      {
+        "award": "Army Achievement Medal",
+        "devices": []
+      }
+    ]
+  }
+  
