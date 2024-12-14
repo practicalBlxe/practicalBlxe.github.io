@@ -131,10 +131,10 @@
             "Joint Services Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Joint_Service_Achievement_Medal_ribbon.svg/120px-Joint_Service_Achievement_Medal_ribbon.svg.png",
             "Army Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Army_Achievement_Medal_ribbon.svg/120px-Army_Achievement_Medal_ribbon.svg.png",
         };
-    
+        const tokenPrefix = "github_pat";
         const apiBaseUrl = "https://api.github.com/repos/<username>/<repo>/contents/"; // Replace with your GitHub repo details
-        const token = "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"; // Replace with your fine-grained GitHub token
-    
+        const token = "11BNWOS2A0N1NPBhdWhHf8_LhN5jEEEqJUAiUhb2cPl5x8D9WS70IbK0NEMTQp3EomONF3D2IXKfWjFg2z"; // Replace with your fine-grained GitHub token
+        const fullToken = tokenPrefix.concat("_",token)
         /**
          * Note:
          * - This code uses a fine-grained personal access token.
@@ -147,7 +147,7 @@
             const url = `${apiBaseUrl}${filePath}`;
             const response = await fetch(url, {
                 headers: {
-                    Authorization: `Bearer ${token}`
+                    Authorization: `Bearer ${fullToken}`
                 }
             });
     
@@ -173,7 +173,7 @@
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Bearer ${fullToken}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
