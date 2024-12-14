@@ -1,1 +1,129 @@
-{"Jane Doe":[{"award":"Medal of Honor","devices":[]},{"award":"Army Achievement Medal","devices":["Oak Cluster Device"]}],"John Doe":[{"award":"Army Achievement Medal","devices":[]}],"fuzzyboy22227":[{"award":"DHS Distinguished Service Medal","devices":"None"},{"award":"award","devices":"None"},{"award":"army achievement medal","devices":"None"}]}
+{
+    "BrokenExostylx": [
+      {
+        "award": "Medal of Honor",
+        "devices": ["None"]
+      },
+      {
+        "award": "Distinguished Service Cross",
+        "devices": ["None"]
+      },
+      {
+        "award": "Defense Distinguished Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Distinguished Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Silver Star Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Defense Superior Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Legion of Merit",
+        "devices": ["Officer Grade"]
+      },
+      {
+        "award": "Soldier's Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Bronze Star Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Purple Heart Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Defense Meritorious Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Meritorious Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Joint Service Commendation Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Commendation Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Joint Service Achievement Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Achievement Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Prisoner of War Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Good Conduct Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "National Defense Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Global War on Terrorism Expedtionary Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Armed Forces Expedtionary Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Armed Forces Service Medal",
+        "devices": ["None"]
+      },
+      {
+        "award": "Sea Duty Ribbon",
+        "devices": ["None"]
+      },
+      {
+        "award": "Overseas Ribbon",
+        "devices": ["None"]
+      },
+      {
+        "award": "Recruitment Ribbon",
+        "devices": ["None"]
+      },
+      {
+        "award": "Service Ribbon",
+        "devices": ["None"]
+      }
+    ],
+    "John Doe": [
+      {
+        "award": "Army Achievement Medal",
+        "devices": []
+      }
+    ],
+    "fuzzyboy22227": [
+      {
+        "award": "DHS Distinguished Service Medal",
+        "devices": "None"
+      },
+      {
+        "award": "award",
+        "devices": "None"
+      },
+      {
+        "award": "army achievement medal",
+        "devices": "None"
+      }
+    ]
+  }
+  
