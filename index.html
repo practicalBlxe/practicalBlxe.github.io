@@ -287,26 +287,30 @@
         });
 
         searchButton.addEventListener('click', () => {
-            const query = personName.value.trim().toLowerCase();
-            resultsList.innerHTML = '';
+    const query = personName.value.trim().toLowerCase();
+    resultsList.innerHTML = '';
 
-            if (peopleAwards[query]) {
-                peopleAwards[query].forEach(entry => {
-                    const li = document.createElement('li');
-                    const img = document.createElement('img');
-                    img.src = awardImages[entry.award.toLowerCase()] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Placeholder_award.svg/120px-Placeholder_award.svg.png';
-                    img.alt = entry.award;
-                    li.appendChild(img);
-                    const text = document.createTextNode(`Award: ${entry.award}, Devices: ${entry.devices.join(', ') || 'None'}`);
-                    li.appendChild(text);
-                    resultsList.appendChild(li);
-                });
-            } else {
-                const li = document.createElement('li');
-                li.textContent = 'No awards found for this person.';
-                resultsList.appendChild(li);
-            }
+    if (peopleAwards[query]) {
+        peopleAwards[query].forEach(entry => {
+            const li = document.createElement('li');
+            const img = document.createElement('img');
+            img.src = awardImages[entry.award.toLowerCase()] || 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Placeholder_award.svg/120px-Placeholder_award.svg.png';
+            img.alt = entry.award;
+            li.appendChild(img);
+
+            // Ensure `entry.devices` is treated as an array
+            const devicesList = Array.isArray(entry.devices) ? entry.devices : [];
+            const text = document.createTextNode(`Award: ${entry.award}, Devices: ${devicesList.join(', ') || 'None'}`);
+            li.appendChild(text);
+            resultsList.appendChild(li);
         });
+    } else {
+        const li = document.createElement('li');
+        li.textContent = 'No awards found for this person.';
+        resultsList.appendChild(li);
+    }
+});
+
 
         logButton.addEventListener('click', async () => {
             const person = newPerson.value.trim().toLowerCase();
