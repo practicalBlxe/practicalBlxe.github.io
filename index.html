@@ -315,7 +315,7 @@
 
             // Ensure `entry.devices` is treated as an array
             const devicesList = Array.isArray(entry.devices) ? entry.devices : [];
-            const text = document.createTextNode(`Award: ${entry.award}, Devices: ${devicesList.join(', ') || 'None'}`);
+            const text = document.createTextNode(`${entry.award} (Devices: ${devicesList.join(', ') || 'None'})`);
             li.appendChild(text);
             resultsList.appendChild(li);
         });
