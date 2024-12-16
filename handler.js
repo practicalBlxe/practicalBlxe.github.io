@@ -40,14 +40,7 @@ const awardImages = {
             "Air Force Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/U.S._Air_Force_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Air_Force_Good_Conduct_Medal_ribbon.svg.png", 
             "Space Force Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Space_Force_Good_Conduct_Medal_Ribbon.svg/1920px-Space_Force_Good_Conduct_Medal_Ribbon.svg.png", 
             "Coast Guard Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/U.S._Coast_Guard_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Coast_Guard_Good_Conduct_Medal_ribbon.svg.png",
-            "Marine Corps Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/U.S._Marine_Corps_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Marine_Corps_Good_Conduct_Medal_ribbon.svg.png",    
- 
- 
- 
- 
- 
- 
- 
+            "Marine Corps Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/U.S._Marine_Corps_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Marine_Corps_Good_Conduct_Medal_ribbon.svg.png",
         };
         
         const tokenPrefix = "github_pat";
