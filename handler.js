@@ -21,7 +21,35 @@ const awardImages = {
             "Bronze Star Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Bronze_Star_Medal_ribbon.svg/1920px-Bronze_Star_Medal_ribbon.svg.png",  
             "Purple Heart": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Purple_Heart_ribbon.svg/1920px-Purple_Heart_ribbon.svg.png", 
             "Defense Meritorious Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Defense_Meritorious_Service_Medal_ribbon.svg/1920px-Defense_Meritorious_Service_Medal_ribbon.svg.png", 
+            "Meritorious Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Meritorious_Service_Medal_ribbon.svg/1920px-Meritorious_Service_Medal_ribbon.svg.png", 
+            "Air Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Air_Medal_ribbon.svg/1920px-Air_Medal_ribbon.svg.png", 
+            "Aerial Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Aerial_Achievement_Medal_ribbon.svg/1920px-Aerial_Achievement_Medal_ribbon.svg.png", 
+            "Joint Service Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Joint_Service_Commendation_Medal_ribbon.svg/1920px-Joint_Service_Commendation_Medal_ribbon.svg.png",
+            "Army Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Army_Commendation_Medal_ribbon.svg/1920px-Army_Commendation_Medal_ribbon.svg.png",
+            "Navy & Marine Corps Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Navy_and_Marine_Corps_Commendation_Medal_ribbon.svg/1920px-Navy_and_Marine_Corps_Commendation_Medal_ribbon.svg.png",
+            "Air Force Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Air_and_Space_Commendation_Medal_ribbon.svg/1920px-Air_and_Space_Commendation_Medal_ribbon.svg.png",
+            "Air Force Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Air_and_Space_Commendation_Medal_ribbon.svg/1920px-Air_and_Space_Commendation_Medal_ribbon.svg.png",
+            "Coast Guard Commendation Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/U.S._Coast_Guard_Commendation_Medal_ribbon.svg/1920px-U.S._Coast_Guard_Commendation_Medal_ribbon.svg.png",
+            "Joint Service Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Joint_Service_Achievement_Medal_ribbon.svg/1920px-Joint_Service_Achievement_Medal_ribbon.svg.png",
+            "Army Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Army_Achievement_Medal_ribbon.svg/1920px-Army_Achievement_Medal_ribbon.svg.png", 
+            "Navy & Marine Corps Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Navy_and_Marine_Corps_Achievement_Medal_ribbon.svg/1920px-Navy_and_Marine_Corps_Achievement_Medal_ribbon.svg.png", 
+            "Air Force Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Air_and_Space_Achievement_Medal_ribbon.svg/1920px-Air_and_Space_Achievement_Medal_ribbon.svg.png", 
+            "Coast Guard Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/U.S._Coast_Guard_Achievement_Medal_ribbon.svg/1920px-U.S._Coast_Guard_Achievement_Medal_ribbon.svg.png",
+            "Army Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Army_Good_Conduct_Medal_ribbon.svg/1920px-Army_Good_Conduct_Medal_ribbon.svg.png",
+            "Navy Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/U.S._Navy_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Navy_Good_Conduct_Medal_ribbon.svg.png", 
+            "Air Force Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/U.S._Air_Force_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Air_Force_Good_Conduct_Medal_ribbon.svg.png", 
+            "Space Force Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Space_Force_Good_Conduct_Medal_Ribbon.svg/1920px-Space_Force_Good_Conduct_Medal_Ribbon.svg.png", 
+            "Coast Guard Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/U.S._Coast_Guard_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Coast_Guard_Good_Conduct_Medal_ribbon.svg.png",
+            "Marine Corps Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/U.S._Marine_Corps_Good_Conduct_Medal_ribbon.svg/1920px-U.S._Marine_Corps_Good_Conduct_Medal_ribbon.svg.png",    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
         };
+        
         const tokenPrefix = "github_pat";
         const apiBaseUrl = "https://api.github.com/repos/practicalBlxe/practicalBlxe.github.io/contents/"; // Replace with your GitHub repo details
         const token = "11BNWOS2A0N1NPBhdWhHf8_LhN5jEEEqJUAiUhb2cPl5x8D9WS70IbK0NEMTQp3EomONF3D2IXKfWjFg2z"; // Replace with your fine-grained GitHub token
