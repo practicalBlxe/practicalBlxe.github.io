@@ -127,7 +127,7 @@ const awardImages = {
         });
 
         newAward.addEventListener('input', () => {
-            const query = newAward.value.trim().toLowerCase();
+            const query = newAward.value.trim();
             suggestionBox.innerHTML = '';
             if (!query) {
                 suggestionBox.style.display = 'none';
@@ -179,7 +179,7 @@ const awardImages = {
 
         logButton.addEventListener('click', async () => {
             const person = newPerson.value.trim().toLowerCase();
-            const award = newAward.value.trim().toLowerCase();
+            const award = newAward.value.trim();
             const devices = newDevice.value.split(',').map(device => device.trim()).filter(device => device);
 
             if (!person || !award) {

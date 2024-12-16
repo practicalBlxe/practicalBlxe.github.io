@@ -13,7 +13,7 @@
         "devices": ["None"]
       },
       {
-        "award": "Distinguished Service Medal",
+        "award": "Army Distinguished Service Medal",
         "devices": ["None"]
       },
       {
@@ -37,7 +37,7 @@
         "devices": ["None"]
       },
       {
-        "award": "Purple Heart Medal",
+        "award": "Purple Heart",
         "devices": ["None"]
       },
       {
@@ -53,7 +53,7 @@
         "devices": ["None"]
       },
       {
-        "award": "Commendation Medal",
+        "award": "Army Commendation Medal",
         "devices": ["None"]
       },
       {
@@ -61,7 +61,7 @@
         "devices": ["None"]
       },
       {
-        "award": "Achievement Medal",
+        "award": "Army Achievement Medal",
         "devices": ["None"]
       },
       {
@@ -69,7 +69,7 @@
         "devices": ["None"]
       },
       {
-        "award": "Good Conduct Medal",
+        "award": "Army Good Conduct Medal",
         "devices": ["None"]
       },
       {
@@ -89,19 +89,19 @@
         "devices": ["None"]
       },
       {
-        "award": "Sea Duty Ribbon",
+        "award": "Army Sea Duty Ribbon",
         "devices": ["None"]
       },
       {
-        "award": "Overseas Ribbon",
+        "award": "Army Overseas Service Ribbon",
         "devices": ["None"]
       },
       {
-        "award": "Recruitment Ribbon",
+        "award": "Army Recruitment Ribbon",
         "devices": ["None"]
       },
       {
-        "award": "Service Ribbon",
+        "award": "Army Service Ribbon",
         "devices": ["None"]
       }
     ],
@@ -143,16 +143,16 @@
             "devices": ["None"]
           },
           {
-            "award": "Commendation Medal",
+            "award": "Army Commendation Medal",
             "devices": ["None"]
           },
           {
-            "award": "Achievement Medal",
+            "award": "Army Achievement Medal",
             "devices": ["None"]
           },
           {
-            "award": "Good Conduct Medal",
-            "devices": ["None"]
+            "award": "Army Good Conduct Medal",
+            "devices": ["2 Good Conduct Knots"]
           },
           {
             "award": "National Defense Service Medal",
@@ -171,15 +171,15 @@
             "devices": ["None"]
           },
           {
-            "award": "Overseas Ribbon",
+            "award": "Army Overseas Service Ribbon",
             "devices": ["None"]
           },
           {
-            "award": "Recruitment Ribbon",
+            "award": "Army Recruitment Ribbon",
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
             "devices": ["None"]
           },
           {
@@ -193,17 +193,13 @@
           {
             "award": "German Award for Weapons Proficiency",
             "devices": ["Class 1 ~ Gold"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
+            "devices": ["None"]
           }
     ],
     "jeffyuopl": [
-        {
-            "award": "Distinguished Service Cross",
-            "devices": ["None"]
-          },
-          {
-            "award": "Distinguished Service Medal",
-            "devices": ["None"]
-          },
           {
             "award": "Soldier's Medal",
             "devices": ["None"]
@@ -223,6 +219,14 @@
           {
             "award": "German Award for Weapons Proficiency",
             "devices": ["Class 2 ~ Silver"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
+            "devices": ["None"]
+          },
+          {
+            "award": "Number #1 Dipshit Award",
+            "devices": ["Awarded for getting himself removed for trying to be a walt"]
           }
     ],
     "projectzorgox1x1os": [
@@ -231,11 +235,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Commendation Medal",
+            "award": "Army Commendation Medal",
             "devices": ["None"]
           },
           {
-            "award": "Good Conduct Medal",
+            "award": "Army Good Conduct Medal",
             "devices": ["None"]
           },
           {
@@ -243,7 +247,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
+            "devices": ["None"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
             "devices": ["None"]
           }
     ],
@@ -269,7 +277,7 @@
             "devices": ["None"]
           },
           {
-            "award": "Good Conduct Medal",
+            "award": "Army Good Conduct Medal",
             "devices": ["None"]
           },
           {
@@ -277,11 +285,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Recruitment Ribbon",
+            "award": "Army Recruitment Ribbon",
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
             "devices": ["None"]
           },
           {
@@ -291,6 +299,10 @@
           {
             "award": "German Award for Weapons Proficiency",
             "devices": ["Class 1 ~ Gold"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
+            "devices": ["None"]
           }
     ],
     "lieutenant_jack2011": [
@@ -299,13 +311,17 @@
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
+            "devices": ["None"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
             "devices": ["None"]
           }
     ],
     "wsr719": [
         {
-            "award": "Commendation Medal",
+            "award": "Army Commendation Medal",
             "devices": ["None"]
           },
           {
@@ -313,7 +329,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
+            "devices": ["None"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
             "devices": ["None"]
           }
     ],
@@ -323,7 +343,7 @@
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
             "devices": ["None"]
           }
     ],
@@ -349,11 +369,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Recruitment Ribbon",
+            "award": "Army Recruitment Ribbon",
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
             "devices": ["None"]
           }
     ],
@@ -399,11 +419,19 @@
             "devices": ["None"]
           },
           {
-            "award": "Overseas Ribbon",
+            "award": "Army Overseas Service Ribbon",
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
+            "devices": ["None"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
+            "devices": ["None"]
+          },
+          {
+            "award": "DHS Distinguished Service Medal",
             "devices": ["None"]
           }
     ],
@@ -413,7 +441,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
+            "devices": ["None"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
             "devices": ["None"]
           }
     ],
@@ -423,7 +455,11 @@
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
+            "devices": ["None"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
             "devices": ["None"]
           }
     ],
@@ -433,7 +469,7 @@
           "devices": ["None"]
         },
         {
-          "award": "Department of Homeland Security Distinguished Service Medal",
+          "award": "DHS Distinguished Service Medal",
           "devices": ["None"]
         },
         {
@@ -445,15 +481,15 @@
             "devices": ["None"]
           },
           {
-            "award": "Commendation Medal",
+            "award": "Army Commendation Medal",
             "devices": ["None"]
           },
           {
-            "award": "Achievement Medal",
+            "award": "Army Achievement Medal",
             "devices": ["None"]
           },
           {
-            "award": "Good Conduct Medal",
+            "award": "Army Good Conduct Medal",
             "devices": ["None"]
           },
           {
@@ -469,16 +505,20 @@
             "devices": ["None"]
           },
           {
-            "award": "Recruitment Ribbon",
+            "award": "Army Recruitment Ribbon",
             "devices": ["None"]
           },
           {
-            "award": "Service Ribbon",
+            "award": "Army Service Ribbon",
             "devices": ["None"]
           },
           {
             "award": "German Award for Weapons Proficiency",
             "devices": ["Class 3 ~ Gold"]
+          },
+          {
+            "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
+            "devices": ["None"]
           }
   ],
   "hitmans_ghost": [
@@ -495,11 +535,11 @@
         "devices": ["None"]
       },
       {
-        "award": "Commendation Medal",
+        "award": "Army Commendation Medal",
         "devices": ["None"]
       },
       {
-        "award": "Good Conduct Medal",
+        "award": "Army Good Conduct Medal",
         "devices": ["None"]
       },
       {
@@ -511,7 +551,11 @@
       "devices": ["None"]
     },
     {
-      "award": "Service Ribbon",
+      "award": "Army Service Ribbon",
+      "devices": ["None"]
+    },
+    {
+      "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
       "devices": ["None"]
     }
 ],
@@ -528,11 +572,11 @@
         "devices": ["None"]
       },
       {
-        "award": "Commendation Medal",
+        "award": "Army Commendation Medal",
         "devices": ["None"]
       },
       {
-        "award": "Good Conduct Medal",
+        "award": "Army Good Conduct Medal",
         "devices": ["2 Good Conduct Knots"]
       },
       {
@@ -546,8 +590,11 @@
       {
         "award": "Armed Forces Service Medal",
         "devices": ["None"]
+      },
+      {
+        "award": "Guard, Tomb of the Unknown Soldier Identifcation Badge",
+        "devices": ["None"]
       }
-
 ],
 
 "Blueisfollowingyou": [
@@ -560,7 +607,7 @@
         "devices": ["None"]
       },
       {
-        "award": "Service Ribbon",
+        "award": "Army Service Ribbon",
         "devices": ["None"]
       }
 ]
