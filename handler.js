@@ -20,6 +20,20 @@ const awardImages = {
             "Joint Service Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Joint_Service_Achievement_Medal_ribbon.svg/1920px-Joint_Service_Achievement_Medal_ribbon.svg.png",
             "Army Achievement Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Army_Achievement_Medal_ribbon.svg/1920px-Army_Achievement_Medal_ribbon.svg.png", 
             "Army Good Conduct Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Army_Good_Conduct_Medal_ribbon.svg/1920px-Army_Good_Conduct_Medal_ribbon.svg.png",
+            "Antarctica Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Antarctica_Service_Medal_ribbon.svg/1920px-Antarctica_Service_Medal_ribbon.svg.png",
+            "Armed Forces Expeditionary Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Armed_Forces_Expeditionary_Medal_ribbon.svg/1920px-Armed_Forces_Expeditionary_Medal_ribbon.svg.png",
+            "Global War on Terrorism Expeditionary Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Global_War_on_Terrorism_Expeditionary_Medal_ribbon.svg/1920px-Global_War_on_Terrorism_Expeditionary_Medal_ribbon.svg.png",
+            "Global War on Terrorism Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Global_War_on_Terrorism_Service_Medal_ribbon.svg/1920px-Global_War_on_Terrorism_Service_Medal_ribbon.svg.png",
+            "Armed Forces Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Armed_Forces_Service_Medal_ribbon.svg/1920px-Armed_Forces_Service_Medal_ribbon.svg.png",
+            "Humanitarian Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Humanitarian_Service_Medal_ribbon.svg/1920px-Humanitarian_Service_Medal_ribbon.svg.png",
+            "Army Sea Duty Ribbon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/U.S._Army_Sea_Duty_Ribbon.svg/1920px-U.S._Army_Sea_Duty_Ribbon.svg.png",
+            "Army Overseas Service Ribbon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Army_Overseas_Service_Ribbon.svg/1920px-Army_Overseas_Service_Ribbon.svg.png",
+            "Army Recruiting Ribbon": "https://upload.wikimedia.org/wikipedia/commons/8/89/USA_Army_Recruiting_Ribbon.png",
+            "Army Non-Commissioned Officer Development Ribbon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Non-Commissioned_Officer_Professional_Development_Ribbon.svg/1920px-Non-Commissioned_Officer_Professional_Development_Ribbon.svg.png",
+            "Army Service Ribbon": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Army_Service_Ribbon.svg/1920px-Army_Service_Ribbon.svg.png",
+            "National Defense Service Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/National_Defense_Service_Medal_ribbon.svg/1920px-National_Defense_Service_Medal_ribbon.svg.png",
+            "Kosovo Campaign Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kosovo_Campaign_Medal_ribbon.svg/1920px-Kosovo_Campaign_Medal_ribbon.svg.png",
+            "Afghanistan Campaign Medal": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Afghanistan_Campaign_Medal_ribbon.svg/1920px-Afghanistan_Campaign_Medal_ribbon.svg.png",
         };
         
         const tokenPrefix = "github_pat";
