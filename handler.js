@@ -107,19 +107,23 @@ const awardImages = {
         const loginMessage = document.getElementById('loginMessage');
 
         loginButton.addEventListener('click', () => {
-            const username = usernameInput.value.trim().toLowerCase();
+            const username = usernameInput.value.trim();
             const password = passwordInput.value.trim();
 
             if (validUsers[username] && validUsers[username] === password) {
                 loginContainer.style.display = 'none';
                 appContainer.style.display = 'block';
-
-                if (username === 'admin') {
-                    logAwardContainer.style.display = 'block';
-                }
+                logAwardContainer.style.display = 'block';
             } else {
                 loginMessage.style.display = 'block';
             }
+        });
+
+        const proceedButton = document.getElementById('proceedButton')
+
+        proceedButton.addEventListener('click', () => {
+            loginContainer.style.display = 'none';
+            appContainer.style.display = 'block';
         });
 
         const searchButton = document.getElementById('searchButton');
