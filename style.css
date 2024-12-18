@@ -37,7 +37,17 @@
             background-position: center; /* Centers the background image */
             width: 100vw; /* Full viewport width */
             height: 100vh; /* Full viewport height */
-        }        
+        }   
+        .applicationBacker {
+            margin: 0; /* Remove margins to align with viewport edges */
+            padding: 40px;
+            background-image: url("https://assets.editorial.aetnd.com/uploads/2012/05/gettyimages-1240914774.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; /* Ensures the background image scales to cover the entire area */
+            background-position: center; /* Centers the background image */
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+        } 
         .container {
             margin-left: 20px;
             margin-right: 20px;
