@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Peanut Butter Balls Recipe</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          colors: {
+
+            background: 'hsl(0 0% 100%)',
+
+            foreground: 'hsl(222.2 84% 4.9%)',
+
+            card: 'hsl(0 0% 100%)',
+
+            'card-foreground': 'hsl(222.2 84% 4.9%)',
+
+            primary: 'hsl(222.2 47.4% 11.2%)',
+
+            'primary-foreground': 'hsl(210 40% 98%)',
+
+            secondary: 'hsl(210 40% 96.1%)',
+
+            'secondary-foreground': 'hsl(222.2 47.4% 11.2%)',
+
+            muted: 'hsl(210 40% 96.1%)',
+
+            'muted-foreground': 'hsl(215.4 16.3% 46.9%)',
+
+            accent: 'hsl(210 40% 96.1%)',
+
+            'accent-foreground': 'hsl(222.2 47.4% 11.2%)',
+
+            destructive: 'hsl(0 84.2% 60.2%)',
+
+            'destructive-foreground': 'hsl(210 40% 98%)',
+
+            border: 'hsl(214.3 31.8% 91.4%)',
+
+            input: 'hsl(214.3 31.8% 91.4%)',
+
+            ring: 'hsl(222.2 84% 4.9%)'
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 text-base text-gray-700">
+
+
+
+  <!-- Header -->
+
+  <div class="bg-white/80 backdrop-blur-sm border-b border-orange-100 sticky top-0 z-10">
+
+    
+
+    <div class="max-w-7xl mx-auto px-4 py-4">
+
+        <a href="index.html" class="text-sm text-orange-600 hover:underline font-medium">
+
+  ← Return to Home
+
+</a><br>
+
+
+
+      <div class="flex items-center gap-3">
+
+        <div class="bg-gradient-to-r from-orange-400 to-red-500 p-2 rounded-full">
+
+          <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+
+            </path>
+
+          </svg>
+
+        </div>
+
+        
+
+        <h1 class="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+
+          Peanut Butter Balls
+
+        </h1>
+
+         <div class="ml-auto">
+
+        <span class="text-gray-600">Happy Cooking, <span id="user-name" class="font-semibold text-orange-600"></span></span>
+
+      </div>
+
+      </div>
+
+
+
+      <!-- Recipe Stats -->
+
+      <div class="flex flex-wrap gap-6 mt-4 text-sm text-gray-600">
+
+        <div class="flex items-center gap-2">
+
+          <svg class="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <circle cx="12" cy="12" r="10"></circle>
+
+            <polyline points="12,6 12,12 16,14"></polyline>
+
+          </svg>
+
+          <span>15 minutes</span>
+
+        </div>
+
+        <div class="flex items-center gap-2">
+
+          <svg class="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+
+            <circle cx="8.5" cy="7" r="4"></circle>
+
+            <path d="M20 8v6M23 11h-6"></path>
+
+          </svg>
+
+          <span>Serves <span id="servings-display">1</span></span>
+
+        </div>
+
+        <div class="flex items-center gap-2">
+
+          <svg class="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+
+            <path d="M7 2v20"></path>
+
+            <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+
+          </svg>
+
+          <span>Dessert</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Main Content -->
+
+  <div class="max-w-7xl mx-auto px-4 py-8">
+
+
+
+    <div class="grid lg:grid-cols-2 gap-8">
+
+
+
+
+
+
+
+      <!-- Left Panel -->
+
+      <div class="space-y-6">
+
+
+
+
+
+        <!-- Adjust Portions -->
+
+        <div class="bg-white/70 backdrop-blur-sm border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg">
+
+          <div class="p-6 pb-4">
+
+            <h2 class="text-lg font-semibold text-gray-800 flex items-center gap-2">
+
+              <svg class="h-5 w-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+
+                <circle cx="8.5" cy="7" r="4"></circle>
+
+                <path d="M20 8v6M23 11h-6"></path>
+
+              </svg>
+
+              Adjust Portions
+
+            </h2>
+
+          </div>
+
+          <div class="p-6 pt-0">
+
+            <div class="flex items-center gap-4">
+
+              <label for="portions" class="text-sm font-medium leading-none text-gray-700">Servings:</label>
+
+              <input id="portions" type="number" min="1" max="20" value="1"
+
+                class="flex h-10 w-20 rounded-md border border-orange-200 bg-white px-3 py-2 text-base text-center ring-offset-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2" />
+
+              <span class="text-sm text-gray-600">people</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <hr class="my-4 border-t border-orange-200" />
+
+        <h2 class="text-2xl font-bold bg-text-grey-800 bg-clip-text ">
+
+          Ingredients
+
+        </h2>
+
+        <!-- Ingredients -->
+
+        <div id="ingredients-container"></div>
+
+
+
+        <hr class="my-4 border-t border-orange-200" />
+
+
+
+        <!-- Nutrition Information -->
+
+        <div id="nutrition-container"></div>
+
+
+
+      </div>
+
+
+
+
+
+      <!-- Instructions -->
+
+      <div>
+
+
+
+        <div class="bg-white/70 backdrop-blur-sm border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg h-fit">
+
+          <div class="p-6 pb-4">
+
+            <h2 class="text-lg font-semibold text-gray-800 flex items-center gap-2">
+
+              <svg class="h-5 w-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+
+                <path d="M7 2v20"></path>
+
+                <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+
+              </svg>
+
+              Cooking Instructions
+
+            </h2>
+
+          </div>
+
+          <div class="p-6 pt-0">
+
+            <div class="space-y-4 card-content space-y-4"></div>
+
+
+
+            
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    const ingredientSections = [
+
+      {
+
+        title: "Main Ingredients",
+
+        items: [
+
+          { name: "Oats", quantity: 40, unit: "g" },
+
+          { name: "Chia Seeds", quantity: 10, unit: "g" },
+
+          { name: "Protein Powder", quantity: 20, unit: "g"}
+
+        ]
+
+      },
+
+    ];
+
+
+
+    const instructionSteps = [
+
+      "Make the marinade by measuring out the yogurt and seasonsing into a bowl. Mix them until well combined.",
+
+      "Add the Chicken into the marinade and mix until it's well coated. Place in the fridge and allow to marinate for at least 20 minutes.",
+
+      "Heat the oil in a pan and cook the chicken until browned. Remove the chicken from the pan and set aside. Keep it warm.",
+
+      "In the same pan, add in your onions until browned.",
+
+      "Add in the ginger and garlic. Saute for another minute.",
+
+      "Add in the seasonings, chopped tomatoes and yogurt. Simmer this mixute for 10 minutes.",
+
+      "Using a hand blender, blend the sauce with the water.",
+
+      "Re-add the chicken into the sauce. Simmer for 10-15 minutes.",
+
+      "Garnish with coriander and a small amount of yogurt.",
+
+      "Serve hot with a side of rice and/or naan.",
+
+    ];
+
+
+
+    const nutritionTable = [
+
+  { name: "Calories", amount: 278, unit: "kcal" },
+
+  { name: "Protein", amount: 30, unit: "g" },
+
+  { name: "Carbohydrates", amount: 20, unit: "g" },
+
+  { name: "Fat", amount: 8, unit: "g" },
+
+  { name: "Saturated Fat", amount: 1, unit: "g" },
+
+  { name: "Polyunsaturated Fat", amount: 1, unit: "g" },
+
+  { name: "Monounsaturated Fat", amount: 4, unit: "g" },
+
+  { name: "Cholesterol", amount: 73, unit: "mg" },
+
+  { name: "Sodium", amount: 49, unit: "mg" },
+
+  { name: "Potassium", amount: 636, unit: "mg" },
+
+  { name: "Fiber", amount: 2, unit: "g" },
+
+  { name: "Sugar", amount: 14, unit: "g" },
+
+  { name: "Vitamin A", amount: 0.05, unit: "µg" },
+
+  { name: "Vitamin C", amount: 7, unit: "mg" },
+
+  { name: "Calcium", amount: 25, unit: "mg" },
+
+  { name: "Iron", amount: 10, unit: "mg" },
+
+];
+
+
+
+
+
+    const portionsInput = document.getElementById('portions');
+
+    const servingsDisplay = document.getElementById('servings-display');
+
+    const ingredientsContainer = document.getElementById('ingredients-container');
+
+    const instructionsContainer = document.querySelector('.card-content.space-y-4');
+
+
+
+    function updateIngredients() {
+
+      const portions = Math.max(1, parseInt(portionsInput.value) || 1);
+
+      servingsDisplay.textContent = portions;
+
+
+
+      ingredientsContainer.innerHTML = '';
+
+
+
+      ingredientSections.forEach(section => {
+
+        const sectionCard = document.createElement('div');
+
+        sectionCard.className = 'bg-white/70 backdrop-blur-sm border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg';
+
+
+
+        const cardHeader = document.createElement('div');
+
+        cardHeader.className = 'p-6 pb-4';
+
+        const cardTitle = document.createElement('h2');
+
+        cardTitle.className = 'text-lg font-semibold text-gray-800';
+
+        cardTitle.textContent = section.title;
+
+        cardHeader.appendChild(cardTitle);
+
+
+
+        const cardContent = document.createElement('div');
+
+        cardContent.className = 'p-6 pt-0';
+
+
+
+        const itemsContainer = document.createElement('div');
+
+        itemsContainer.className = 'space-y-3';
+
+
+
+section.items.forEach(ingredient => {
+
+  const totalQuantity = ingredient.quantity * portions;
+
+
+
+  // Helper function to convert decimal to fraction string
+
+  function formatFraction(value) {
+
+    const whole = Math.floor(value);
+
+    const fraction = value - whole;
+
+    let fractionStr = '';
+
+
+
+    if (fraction === 0.5) {
+
+      fractionStr = '½';
+
+    } else if (fraction === 0.25) {
+
+      fractionStr = '¼';
+
+    } else if (fraction === 0.75) {
+
+      fractionStr = '¾';
+
+    }
+
+
+
+    if (fractionStr) {
+
+      return whole > 0 ? `${whole} ${fractionStr}` : `${fractionStr}`;
+
+    } else {
+
+      return value % 1 === 0 ? value.toString() : value.toFixed(1);
+
+    }
+
+  }
+
+
+
+  const displayQuantity = formatFraction(totalQuantity);
+
+
+
+  const itemDiv = document.createElement('div');
+
+  itemDiv.className = 'flex items-center justify-between p-3 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border border-orange-100 hover:shadow-md transition-all duration-200';
+
+
+
+  const nameSpan = document.createElement('span');
+
+  nameSpan.className = 'font-medium text-gray-800';
+
+  nameSpan.textContent = ingredient.name;
+
+
+
+  const quantityDiv = document.createElement('div');
+
+  quantityDiv.className = 'text-sm font-semibold text-orange-600 bg-orange-100 px-2 py-1 rounded-full';
+
+  quantityDiv.textContent = `${displayQuantity} ${ingredient.unit}`;
+
+
+
+  itemDiv.appendChild(nameSpan);
+
+  itemDiv.appendChild(quantityDiv);
+
+  itemsContainer.appendChild(itemDiv);
+
+});
+
+
+
+cardContent.appendChild(itemsContainer);
+
+sectionCard.appendChild(cardHeader);
+
+sectionCard.appendChild(cardContent);
+
+ingredientsContainer.appendChild(sectionCard);
+
+
+
+      });
+
+    }
+
+
+
+    function renderInstructions() {
+
+      instructionsContainer.innerHTML = '';
+
+      instructionSteps.forEach((step, index) => {
+
+        const stepDiv = document.createElement('div');
+
+        stepDiv.className = 'flex gap-4 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border border-orange-100 hover:shadow-md transition-all duration-200';
+
+
+
+        const stepNum = document.createElement('div');
+
+        stepNum.className = 'flex-shrink-0 w-8 h-8 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full flex items-center justify-center font-bold text-sm';
+
+        stepNum.textContent = index + 1;
+
+
+
+        const stepText = document.createElement('p');
+
+        stepText.className = 'text-gray-700 leading-relaxed';
+
+        stepText.textContent = step;
+
+
+
+        stepDiv.appendChild(stepNum);
+
+        stepDiv.appendChild(stepText);
+
+        instructionsContainer.appendChild(stepDiv);
+
+      });
+
+    }
+
+
+
+const nutritionContainer = document.getElementById('nutrition-container');
+
+
+
+function renderNutrition() {
+
+  nutritionContainer.innerHTML = '';
+
+
+
+  const card = document.createElement('div');
+
+  card.className = 'bg-white/70 backdrop-blur-sm border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg';
+
+
+
+  const header = document.createElement('div');
+
+  header.className = 'p-6 pb-4';
+
+  const title = document.createElement('h2');
+
+  title.className = 'text-lg font-semibold text-gray-800 flex items-center gap-2';
+
+  title.innerHTML = `
+
+    <svg class="h-5 w-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+      <path d="M4 6h16M4 12h16M4 18h16" />
+
+    </svg>
+
+    Nutritional Information
+
+  `;
+
+  header.appendChild(title);
+
+
+
+  const content = document.createElement('div');
+
+  content.className = 'p-6 pt-0';
+
+
+
+  const list = document.createElement('div');
+
+  list.className = 'space-y-3';
+
+
+
+  nutritionTable.forEach(nutrient => {
+
+    const item = document.createElement('div');
+
+    item.className = 'flex items-center justify-between p-3 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border border-orange-100 hover:shadow-md transition-all duration-200';
+
+
+
+    const name = document.createElement('span');
+
+    name.className = 'font-medium text-gray-800';
+
+    name.textContent = nutrient.name;
+
+
+
+    const value = document.createElement('div');
+
+    value.className = 'text-sm font-semibold text-orange-600 bg-orange-100 px-2 py-1 rounded-full';
+
+    value.textContent = `${nutrient.amount} ${nutrient.unit}`;
+
+
+
+    item.appendChild(name);
+
+    item.appendChild(value);
+
+    list.appendChild(item);
+
+  });
+
+
+
+  content.appendChild(list);
+
+  card.appendChild(header);
+
+  card.appendChild(content);
+
+  nutritionContainer.appendChild(card);
+
+}
+
+
+
+
+
+    portionsInput.addEventListener('input', updateIngredients);
+
+    updateIngredients();
+
+    renderInstructions();
+
+    renderNutrition();
+
+
+
+    const currentUser = localStorage.getItem("currentUser");
+
+
+
+// Redirect if not logged in
+
+if (!currentUser) {
+
+  window.location.href = "index.html";
+
+} else {
+
+  // Display user name
+
+  const userGreeting = document.getElementById("user-name");
+
+  if (userGreeting) {
+
+    userGreeting.textContent = currentUser;
+
+  }
+
+}
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
