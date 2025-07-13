@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Collection</title>
+  
+  <!-- Tailwind config must come BEFORE Tailwind CDN -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: 'hsl(0 0% 100%)',
+            foreground: 'hsl(222.2 84% 4.9%)',
+            card: 'hsl(0 0% 100%)',
+            'card-foreground': 'hsl(222.2 84% 4.9%)',
+            primary: 'hsl(222.2 47.4% 11.2%)',
+            'primary-foreground': 'hsl(210 40% 98%)',
+            secondary: 'hsl(210 40% 96.1%)',
+            'secondary-foreground': 'hsl(222.2 47.4% 11.2%)',
+            muted: 'hsl(210 40% 96.1%)',
+            'muted-foreground': 'hsl(215.4 16.3% 46.9%)',
+            accent: 'hsl(210 40% 96.1%)',
+            'accent-foreground': 'hsl(222.2 47.4% 11.2%)',
+            destructive: 'hsl(0 84.2% 60.2%)',
+            'destructive-foreground': 'hsl(210 40% 98%)',
+            border: 'hsl(214.3 31.8% 91.4%)',
+            input: 'hsl(214.3 31.8% 91.4%)',
+            ring: 'hsl(222.2 84% 4.9%)'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
+  <!-- Login Screen -->
+  <div id="login-screen" class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/70 backdrop-blur-sm border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg w-full max-w-md">
+      <div class="p-6 pb-4 text-center">
+        <div class="mx-auto mb-4 bg-gradient-to-r from-orange-400 to-red-500 p-3 rounded-full w-16 h-16 flex items-center justify-center">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+          Welcome to Recipe Collection
+        </h1>
+
+         <p class="text-gray-600 mt-2">Welcome to Recipe Collection. This is a collection of restricted dynamic recipies for cooking.</p>
+        <hr class="my-4 border-t border-orange-200" />
+        <p class="text-gray-600 mt-2">Under Section 1 of the Computer Misuse Act 1990, it is an offence to access this program without valid login credentials.</p>
+      </div>
+      <div class="p-6 pt-0">
+        <form id="login-form" class="space-y-4">
+          <div>
+            <label for="name-input" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+            <input id="name-input" required placeholder="Enter your username" type="text"
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
+          </div>
+          <button type="submit"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600 w-full">
+            Sign in.
+          </button>
+        </form>
+        <div id="error-message"
+          class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm hidden">
+          You are not an authorised user.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Homepage -->
+  <div id="homepage" class="hidden">
+    <!-- Header -->
+    <div class="bg-white/80 backdrop-blur-sm border-b border-orange-100 sticky top-0 z-10">
+      <div class="max-w-7xl mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="bg-gradient-to-r from-orange-400 to-red-500 p-2 rounded-full">
+              <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+              Recipe Collection
+            </h1>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-gray-600">Hello, <span id="user-name"
+                class="font-semibold text-orange-600"></span></span>
+            <button id="logout-btn"
+              class="text-sm text-gray-500 hover:text-orange-600 transition-colors">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Discover Amazing Recipes</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          A collection of "supposed to be healthy" recipes. I have no clue if they are or not 🤷
+        </p>
+      </div>
+      <div id="recipes-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </div>
+
+  <script>
+    const authorizedUsers = {
+      'rushfortha': 'Aidan',
+      'knoxl': 'Lesley',
+      'dudziakm': 'Michele',
+      'mckennap': 'Pauline'
+    };
+
+    const recipes = [
+      { name: 'Butter Chicken', description: 'A creamy and delicious butter chicken with a massive calorie reduction.', link: 'butterChicken.html', cookTime: '30 minutes', difficulty: 'Easy' },
+{ name: 'Peanut Butter & Oat Protein Balls', description: 'A sweet treat with Peanut Butter, Oats and Protein.', link: '#', cookTime: 'N/A', difficulty: 'N/A' },
+{ name: 'Overnight Oats', description: 'A health breakfast with Oats, Honey & Fruit.', link: '#', cookTime: 'N/A', difficulty: 'N/A' },
+{ name: 'Fruit-based Protein Shake', description: 'A healthy shake with Fruit, Protein and Yogurt.', link: '#', cookTime: 'N/A', difficulty: 'N/A' },
+    ];
+
+    const loginScreen = document.getElementById('login-screen');
+    const homepage = document.getElementById('homepage');
+    const loginForm = document.getElementById('login-form');
+    const nameInput = document.getElementById('name-input');
+    const errorMessage = document.getElementById('error-message');
+    const userNameDisplay = document.getElementById('user-name');
+    const logoutBtn = document.getElementById('logout-btn');
+    const recipesGrid = document.getElementById('recipes-grid');
+
+    const savedUser = localStorage.getItem('currentUser');
+    if (savedUser) showHomepage(savedUser);
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const enteredName = nameInput.value.trim().toLowerCase();
+      if (authorizedUsers[enteredName]) {
+        const properName = authorizedUsers[enteredName];
+        localStorage.setItem('currentUser', properName);
+        showHomepage(properName);
+        errorMessage.classList.add('hidden');
+      } else {
+        errorMessage.classList.remove('hidden');
+        nameInput.value = '';
+      }
+    });
+
+    logoutBtn.addEventListener('click', function () {
+      localStorage.removeItem('currentUser');
+      loginScreen.classList.remove('hidden');
+      homepage.classList.add('hidden');
+      nameInput.value = '';
+      errorMessage.classList.add('hidden');
+    });
+
+    function showHomepage(userName) {
+      loginScreen.classList.add('hidden');
+      homepage.classList.remove('hidden');
+      userNameDisplay.textContent = userName;
+      populateRecipes();
+    }
+
+    function populateRecipes() {
+      recipesGrid.innerHTML = '';
+      recipes.forEach(recipe => {
+        const recipeCard = document.createElement('div');
+        const isActive = recipe.link !== '#';
+        recipeCard.className = `bg-white/70 backdrop-blur-sm border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg ${isActive ? 'hover:scale-105 cursor-pointer' : 'pointer-events-none opacity-70'}`;
+        if (isActive) {
+          recipeCard.onclick = () => window.location.href = recipe.link;
+        }
+
+        recipeCard.innerHTML = `
+          <div class="p-6 pb-4">
+            <h3 class="text-lg font-semibold text-gray-800">${recipe.name}</h3>
+            <div class="flex gap-4 mt-2 text-sm text-gray-600">
+              <div class="flex items-center gap-1">
+                <svg class="h-4 w-4 text-orange-500" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                  <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span>${recipe.cookTime}</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <svg class="h-4 w-4 text-orange-500" viewBox="0 0 24 24" fill="none">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    stroke="currentColor" stroke-width="2" fill="none" />
+                </svg>
+                <span>${recipe.difficulty}</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <p class="text-gray-700">${recipe.description}</p>
+            ${isActive
+              ? '<div class="mt-4 inline-flex items-center gap-2 text-orange-600 font-medium"><span>View Recipe</span><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>'
+              : '<div class="mt-4 text-gray-400 font-medium">Coming Soon</div>'
+            }
+          </div>
+        `;
+        recipesGrid.appendChild(recipeCard);
+      });
+    }
+  </script>
+</body>
+</html>
